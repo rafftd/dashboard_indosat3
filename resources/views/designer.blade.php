@@ -1086,7 +1086,7 @@
                                         <div class="flex gap-2" id="approval-buttons-${request.id}">
                                             <button onclick="approveRequestDirectly(${request.id})" 
                                                     class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">
-                                                ✓ Selesai
+                                                ✓ ACC
                                             </button>
                                             <button onclick="rejectRequestDirectly(${request.id})" 
                                                     class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">
