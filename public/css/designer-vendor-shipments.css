@@ -1,0 +1,24 @@
+/* Designer Vendor Shipments Dashboard Styles */
+
+/* Print Styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #detailModal, #detailModal * {
+        visibility: visible;
+    }
+    #detailModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: white !important;
+    }
+    #detailModal .sticky {
+        position: relative !important;
+    }
+    button {
+        display: none !important;
+    }
+}

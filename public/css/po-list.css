@@ -1,0 +1,338 @@
+/* PO List Container */
+.po-list-wrapper {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.po-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-icon {
+    font-size: 28px;
+    color: #6b7280;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+/* Info Box */
+.info-box {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 30px;
+}
+
+.info-text {
+    color: #0c4a6e;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* PO Items Container */
+.po-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+/* PO Card */
+.po-card {
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-left: 5px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.po-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Urgent Card */
+.po-card-urgent {
+    border-left-color: #ef4444;
+    background: #fef2f2;
+}
+
+/* Download Icon (for urgent) */
+.download-icon {
+    position: absolute;
+    top: 16px;
+    left: -20px;
+    background: #ef4444;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* PO Info Section */
+.po-info {
+    flex: 1;
+}
+
+.po-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 8px 0;
+}
+
+.po-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.detail-separator {
+    color: #d1d5db;
+}
+
+/* Status Badge */
+.status-badge-container {
+    display: inline-block;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-normal {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-urgent {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-normal .status-dot {
+    background: #10b981;
+}
+
+.status-urgent .status-dot {
+    background: #ef4444;
+}
+
+/* PO Actions Section */
+.po-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+/* Get Answer Button */
+.btn-get-answer {
+    background: #ffffff;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-get-answer:hover {
+    background: #3b82f6;
+    color: #ffffff;
+}
+
+.btn-get-answer i {
+    font-size: 14px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-copy {
+    background: #ffffff;
+    border: 2px solid #d1d5db;
+    color: #374151;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-copy:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+.btn-delete {
+    background: #ffffff;
+    border: 2px solid #fecaca;
+    color: #dc2626;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-delete:hover {
+    background: #fef2f2;
+    border-color: #ef4444;
+}
+
+/* Add Button Container */
+.add-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.btn-add-new {
+    background: #ffffff;
+    border: 2px solid #d1d5db;
+    color: #374151;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-add-new:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+    transform: translateY(-2px);
+}
+
+.total-entries {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 64px;
+    color: #d1d5db;
+    margin-bottom: 20px;
+}
+
+.empty-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.empty-subtext {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .po-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .po-actions {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-copy,
+    .btn-delete {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .add-button-container {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .btn-add-new {
+        width: 100%;
+    }
+
+    .download-icon {
+        left: 10px;
+        top: 10px;
+    }
+}

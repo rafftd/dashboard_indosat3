@@ -1,0 +1,26 @@
+/* Dashboard Page Styles */
+
+/* Background */
+body {
+    background: linear-gradient(135deg, 
+        #ffffff 0%, 
+        #fff9f0 15%, 
+        #fffbf5 30%, 
+        #ffffff 45%,
+        #fef5f8 60%,
+        #ffffff 75%,
+        #fffef0 90%,
+        #ffffff 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Card hover effects */
+.dashboard-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}

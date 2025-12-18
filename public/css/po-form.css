@@ -1,0 +1,232 @@
+/* General Form Styling */
+.po-form-wrapper {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input Fields */
+.form-control {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* Select Dropdown */
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23374151' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+/* Date Input */
+input[type="date"].form-control {
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/* Button Add Column */
+.btn-add-column {
+    background: #fbbf24;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-add-column:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+.btn-add-column i {
+    font-size: 16px;
+}
+
+/* Action Buttons */
+.btn-outline-primary {
+    border: 2px solid #e5e7eb;
+    background: #ffffff;
+    color: #374151;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #fbbf24;
+    color: #000000;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+/* Gap utility for buttons */
+.gap-3 {
+    gap: 1rem;
+}
+
+/* Dynamic Columns */
+#dynamicColumns {
+    margin-top: 30px;
+}
+
+.dynamic-field-group {
+    background: #f9fafb;
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #e5e7eb;
+    position: relative;
+}
+
+.dynamic-field-group .form-group label {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.remove-column-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ef4444;
+    color: #ffffff;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-column-btn:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}
+
+/* Get Answer Button */
+.btn-get-answer {
+    background: #ffffff;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.btn-get-answer:hover {
+    background: #3b82f6;
+    color: #ffffff;
+}
+
+.btn-get-answer i {
+    font-size: 14px;
+}
+
+/* Others Row Highlight */
+#othersRow.show {
+    display: block !important;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#othersRow .form-control {
+    border: 2px solid #fbbf24;
+    background: #fffbeb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .po-form-wrapper {
+        padding: 20px;
+    }
+
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .d-flex.gap-3 {
+        flex-direction: column;
+    }
+}

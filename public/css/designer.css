@@ -1,0 +1,92 @@
+/* Designer Dashboard Styles */
+
+/* Background & Base Styles */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, 
+        #ffffff 0%, 
+        #fff9f0 15%, 
+        #fffbf5 30%, 
+        #ffffff 45%,
+        #fef5f8 60%,
+        #ffffff 75%,
+        #fffef0 90%,
+        #ffffff 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Countdown colors */
+.countdown-urgent { 
+    background-color: #ef4444; 
+    color: white; 
+}
+
+.countdown-warning { 
+    background-color: #f59e0b; 
+    color: white; 
+}
+
+.countdown-normal { 
+    background-color: #10b981; 
+    color: white; 
+}
+
+.countdown-expired { 
+    background-color: #6b7280; 
+    color: white; 
+}
+
+/* Action buttons */
+.action-box {
+    transition: all 0.3s ease;
+}
+
+.action-box.hidden-action {
+    display: none;
+}
+
+.action-box.show-action {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text truncation with tooltip */
+.truncate-text {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.truncate-text:hover {
+    color: #ec008c;
+}
+
+.truncate-text.expanded {
+    white-space: normal;
+    max-width: none;
+}
+
+.truncate-icon {
+    margin-left: 4px;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
