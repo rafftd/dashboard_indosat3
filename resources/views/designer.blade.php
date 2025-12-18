@@ -330,7 +330,7 @@
                             <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Deadline</th>
                             <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">ITEM & QTY</th>
                             <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Status</th>
-                            <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Approved By</th>
+                            <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase" style="display: none;">Approved By</th>
                             <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Approved At</th>
                             <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Detail</th>
                             <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Step</th>
@@ -1162,6 +1162,8 @@
                                 return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
                             };
                             
+                            const deadlineDate = request.deadline ? new Date(request.deadline).toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' }) : '-';
+                            
                             return `
                                 <tr class="hover:bg-gray-50">
                                     <td class="px-4 py-3 text-center whitespace-nowrap">
@@ -1173,17 +1175,17 @@
                                     <td class="px-4 py-3 text-gray-700" title="${request.purpose || '-'}">
                                         ${truncateText(request.purpose, 40)}
                                     </td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-gray-700">
+                                        ${deadlineDate}
+                                    </td>
                                     <td class="px-4 py-3 text-gray-700" title="${request.posm_type}">
                                         ${truncateText(request.posm_type, 25)} (${request.quantity} Pcs)
                                     </td>
                                     <td class="px-4 py-3 whitespace-nowrap">
                                         ${statusBadge}
                                     </td>
-                                    <td class="px-4 py-3 whitespace-nowrap">
+                                    <td class="px-4 py-3 whitespace-nowrap" style="display: none;">
                                         ${productionBadge}
-                                    </td>
-                                    <td class="px-4 py-3 text-gray-700 text-sm" title="${approverName}">
-                                        ${truncateText(approverName, 20)}
                                     </td>
                                     <td class="px-4 py-3 whitespace-nowrap text-gray-700 text-sm">
                                         ${approvedAt}
